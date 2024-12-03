@@ -1,0 +1,10 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: mybluegreen-route
+spec:
+  to:
+    kind: Service
+    name: bluegreen-service  
+  port:
+    targetPort: 80
