@@ -1,0 +1,10 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: mycanary-route
+spec:
+  to:
+    kind: Service
+    name: canary-test-svc
+  port:
+    targetPort: 80
