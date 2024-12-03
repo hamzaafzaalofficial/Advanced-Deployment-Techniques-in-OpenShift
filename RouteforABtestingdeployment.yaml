@@ -1,0 +1,10 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: ab-route
+spec:
+  to:
+    kind: Service
+    name: abtesting-svc
+  port:
+    targetPort: 80
